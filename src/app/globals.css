@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+/* body {
+  background-color: aliceblue;
+} */
+main {
+  background-color: white;
+}
