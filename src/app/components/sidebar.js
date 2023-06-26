@@ -4,15 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import cx from "classnames";
-import { FaMicrosoft, FaUser, FaReadme } from "react-icons/fa";
+import { HiViewGrid, HiUser, HiBookOpen } from "react-icons/hi";
 
 export default function Sidebar() {
   const pathname = usePathname();
 
   const navigationLinks = [
-    { title: `About me`, href: `/home`, icon: <FaUser /> },
-    { title: `Projects`, href: `/projects`, icon: <FaMicrosoft /> },
-    { title: `Posts`, href: `/posts`, icon: <FaReadme /> },
+    { title: `About me`, href: `/home`, icon: <HiUser /> },
+    { title: `Projects`, href: `/projects`, icon: <HiViewGrid /> },
+    { title: `Posts`, href: `/posts`, icon: <HiBookOpen /> },
   ];
   return (
     <div className="text-center w-1/5 bg-white pt-4">
@@ -24,9 +24,9 @@ export default function Sidebar() {
         className="rounded-full mx-auto"
         priority
       />
-      <p className="text-xl font-bold">Vũ Văn Học</p>
+      <p className="text-xl font-bold">Hoc Van Vu</p>
       <code>{`Hello, I'm a Developer`}</code>
-      <nav className="mt-8">
+      <nav className="mt-4">
         <ul className="hover:cursor-pointer">
           {navigationLinks.map((link) => {
             const isActive = pathname.startsWith(link.href);

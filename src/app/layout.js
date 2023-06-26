@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true} className={inter.className}>
         <main className="flex min-h-screen bg-slate-100">
           <Sidebar />
-          <div>
+          <div className="w-full">
             <Header />
             {children}
           </div>
